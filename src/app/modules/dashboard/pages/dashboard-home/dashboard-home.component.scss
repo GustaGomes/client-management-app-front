@@ -1,0 +1,33 @@
+.dashboard-card {
+  padding: 16px;
+  text-align: center;
+
+  &.primary {
+    background-color: #e3f2fd;
+  }
+
+  &.accent {
+    background-color: #fce4ec;
+  }
+
+  &.warn {
+    background-color: #ffebee;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+
+  .icon {
+    font-size: 40px;
+    color: #555;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  gap: 16px;
+}
