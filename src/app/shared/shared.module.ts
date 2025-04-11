@@ -21,6 +21,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent, SidebarComponent, NotFoundComponent],
@@ -42,6 +43,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MatDialogModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    RouterModule,
   ],
   exports: [
     // Exportar componentes reutilizáveis
@@ -64,6 +66,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MatDialogModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    RouterModule,
   ],
 })
 export class SharedModule {}

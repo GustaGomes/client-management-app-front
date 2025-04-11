@@ -16,7 +16,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/clients/clients.module').then((m) => m.ClientsModule),
   },
-  { path: '**', component: NotFoundComponent },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth.module').then((m) => m.AuthModule),
+  },
+  { path: '**', component: NotFoundComponent }, // Página 404
 ];
 
 @NgModule({
