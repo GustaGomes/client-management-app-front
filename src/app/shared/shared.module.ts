@@ -22,9 +22,18 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
+import { PrivateLayoutComponent } from './layouts/private-layout/private-layout.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarComponent, NotFoundComponent],
+  declarations: [
+    HeaderComponent,
+    SidebarComponent,
+    NotFoundComponent,
+    PublicLayoutComponent,
+    PrivateLayoutComponent,
+  ],
   imports: [
     CommonModule,
 
@@ -44,6 +53,7 @@ import { RouterModule } from '@angular/router';
     MatSelectModule,
     MatProgressSpinnerModule,
     RouterModule,
+    ReactiveFormsModule,
   ],
   exports: [
     // Exportar componentes reutilizáveis
@@ -67,6 +77,7 @@ import { RouterModule } from '@angular/router';
     MatSelectModule,
     MatProgressSpinnerModule,
     RouterModule,
+    ReactiveFormsModule,
   ],
 })
 export class SharedModule {}
