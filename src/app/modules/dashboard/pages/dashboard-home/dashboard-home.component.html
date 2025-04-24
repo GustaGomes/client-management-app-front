@@ -16,4 +16,28 @@
       </mat-card-content>
     </mat-card>
   </div>
+
+  <div class="chart_line">
+    <div class="chart_pie">
+      <h3>Distribuição de Clientes</h3>
+      <canvas
+        baseChart
+        [type]="'pie'"
+        [data]="clientsChartData"
+        [options]="chartOptionsPie"
+      >
+      </canvas>
+    </div>
+
+    <div class="chart_bar">
+      <h3>Projetos por Status</h3>
+      <canvas
+        baseChart
+        [type]="'bar'"
+        [data]="projectsChartData"
+        [options]="chartOptionsBar"
+      >
+      </canvas>
+    </div>
+  </div>
 </div>

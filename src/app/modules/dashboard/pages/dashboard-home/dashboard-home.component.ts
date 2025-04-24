@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartOptions, ChartType } from 'chart.js';
 
 @Component({
   selector: 'app-dashboard-home',
@@ -17,6 +18,45 @@ export class DashboardHomeComponent implements OnInit {
       color: 'primary',
     },
   ];
+
+  clientsChartData = {
+    labels: ['Ativos', 'Inativos'],
+    datasets: [
+      {
+        data: [8, 3],
+        backgroundColor: ['#25D366', '#FF5252'],
+      },
+    ],
+  };
+
+  projectsChartData = {
+    labels: ['Em andamento', 'Concluídos', 'Atrasados'],
+    datasets: [
+      {
+        label: 'Projetos',
+        data: [4, 7, 2],
+        backgroundColor: ['#42A5F5', '#66BB6A', '#FFA726'],
+      },
+    ],
+  };
+
+  chartOptionsPie: ChartOptions<'pie'> = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'bottom',
+      },
+    },
+  };
+
+  chartOptionsBar: ChartOptions<'bar'> = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+    },
+  };
 
   constructor() {}
 
