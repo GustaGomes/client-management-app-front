@@ -31,3 +31,38 @@
   grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
   gap: 16px;
 }
+
+.dashboard-container {
+  padding: 24px;
+}
+
+canvas {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  display: block;
+}
+
+.chart_line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.chart_bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  h3 {
+    margin-top: 40px;
+  }
+}
+
+.chart_pie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
