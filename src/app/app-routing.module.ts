@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { PublicLayoutComponent } from './shared/layouts/public-layout/public-layout.component';
 import { PrivateLayoutComponent } from './shared/layouts/private-layout/private-layout.component';
+import { authGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   {
     path: '',
     component: PrivateLayoutComponent,
+    canActivate: [authGuard], // novo formato aqui
     children: [
       {
         path: 'dashboard',
